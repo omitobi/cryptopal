@@ -14,16 +14,21 @@ public class Main {
         // Convert base 64 to base 10
 
         int decimal = 400;
-        StringBuilder binary = new StringBuilder();
+        int[] binary = new int[40];
+        int index = 0;
 
         while (decimal > 0) {
              int reminder = decimal/2;
              int modulo = decimal%2;
-             binary.insert(0, modulo);
+             binary[index++] = modulo;
              decimal = reminder;
         }
 
-        System.out.println(binary);
+        for(int i = index-1;i >= 0;i--){
+            System.out.print(binary[i]);
+        }
+
+        System.out.println();
 
 //        System.out.println(decimal + " sss " + reminder + " aaa" + modulo);
     }
