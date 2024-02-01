@@ -20,7 +20,8 @@ public class Main {
         while (decimal > 0) {
              int reminder = decimal/2;
              int modulo = decimal%2;
-             binary[index++] = modulo;
+             binary[index] = modulo;
+             index++;
              decimal = reminder;
         }
 
